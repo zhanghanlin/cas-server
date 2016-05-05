@@ -21,6 +21,11 @@
         </dependency>
         <dependency>
             <groupId>org.jasig.cas</groupId>
+            <artifactId>cas-server-support-ldap</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jasig.cas</groupId>
             <artifactId>cas-server-integration-restlet</artifactId>
             <version>${project.version}</version>
         </dependency>

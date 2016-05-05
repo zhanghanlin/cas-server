@@ -58,6 +58,8 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.5" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.5" />
           <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-support-jdbc:4.0.1" />
+          <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-support-ldap:4.0.1" />
+          <element id="library" level="project" name="Maven: org.ldaptive:ldaptive:1.0.3" />
           <element id="library" level="project" name="Maven: org.jasig.cas:cas-server-integration-restlet:4.0.1" />
           <element id="library" level="project" name="Maven: org.restlet.jee:org.restlet:2.1.0" />
           <element id="library" level="project" name="Maven: org.restlet.jee:org.restlet.ext.spring:2.1.0" />
