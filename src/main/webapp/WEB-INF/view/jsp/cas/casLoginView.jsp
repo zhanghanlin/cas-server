@@ -1,16 +1,18 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <jsp:directive.include file="includes/top.jsp" />
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Log in</title>
+    <title>车易拍 SSO</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/ionicons.min.css">
     <link rel="stylesheet" href="/css/AdminLTE.min.css">
     <link rel="stylesheet" href="/css/blue.css">
+    <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="32x32" />
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.min.js"></script>
     <script src="/js/respond.min.js"></script>
@@ -19,7 +21,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <b>Passport</b>CAS
+        <b>车易拍</b>SSO
     </div>
     <div class="login-box-body">
         <p class="login-box-msg"><form:errors path="*" element="h2" htmlEscape="false"/></p>
@@ -56,6 +58,7 @@
                 </div>
             </div>
             <div class="row">
+                <br/>
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
@@ -74,8 +77,8 @@
             </div>
         </form:form>
         <div class="social-auth-links text-center"></div>
-        <a href="#">I forgot my password</a><br>
-        <a href="#" class="text-center">Register a new membership</a>
+        <%--<a href="#">I forgot my password</a><br>--%>
+        <%--<a href="#" class="text-center">Register a new membership</a>--%>
     </div>
 </div>
 <script src="/js/jquery.min.js"></script>

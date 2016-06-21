@@ -10,6 +10,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.jasig.cas</groupId>
             <artifactId>cas-server-core</artifactId>
             <version>${project.version}</version>
@@ -97,6 +102,14 @@
         </dependency>
     </dependencies>
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/profile/${deploy.type}</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <!-- Compiler 插件, 设定JDK版本 -->
             <plugin>
@@ -138,14 +151,32 @@
             </plugin>
         </plugins>
     </build>
-
+    <!-- profiles 部署环境 -->
+    <profiles>
+        <!-- 打包开发机 -->
+        <profile>
+            <id>dev</id>
+            <properties>
+                <deploy.type>dev</deploy.type>
+            </properties>
+        </profile>
+        <!-- 打包生产机 -->
+        <profile>
+            <id>product</id>
+            <properties>
+                <deploy.type>product</deploy.type>
+            </properties>
+        </profile>
+    </profiles>
     <properties>
-        <jdk.version>1.7</jdk.version><plugin.compiler.version>2.5.1</plugin.compiler.version>
+        <jdk.version>1.7</jdk.version>
+        <plugin.compiler.version>2.5.1</plugin.compiler.version>
         <plugin.war.version>2.3</plugin.war.version>
         <plugin.resources.version>2.6</plugin.resources.version>
         <plugin.install.version>2.4</plugin.install.version>
         <plugin.clean.version>2.5</plugin.clean.version>
         <cas-security-filter.version>2.0.0</cas-security-filter.version>
+        <druid.version>1.0.12</druid.version>
         <servlet-api.version>2.5</servlet-api.version>
         <kaptcha.version>2.3.2</kaptcha.version>
         <log4j.version>1.2.17</log4j.version>
@@ -154,11 +185,11 @@
         <standard.version>1.1.2</standard.version>
         <nexus.url>http://192.168.104.104:8081/nexus/</nexus.url>
     </properties>
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>central</id>-->
-            <!--<name>central</name>-->
-            <!--<url>{nexus.url}content/groups/</url>-->
-        <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>central</name>
+            <url>{nexus.url}content/groups/</url>
+        </repository>
+    </repositories>
 </project>
