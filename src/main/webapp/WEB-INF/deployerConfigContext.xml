@@ -43,6 +43,11 @@
         <property name="authenticationPolicy">
             <bean class="org.jasig.cas.authentication.AnyAuthenticationPolicy"/>
         </property>
+        <property name="authenticationMetaDataPopulators">
+            <util:list>
+                <bean class="org.jasig.cas.authentication.principal.RememberMeAuthenticationMetaDataPopulator"/>
+            </util:list>
+        </property>
     </bean>
 
     <!-- AD -->
