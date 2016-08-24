@@ -13,5 +13,5 @@
         WAR file
         can be moved between tiers without modification.
     </description>
-    <context:property-placeholder location="classpath:cas.properties"/>
+    <context:property-placeholder location="/WEB-INF/cas.properties"/>
 </beans>

@@ -5,11 +5,9 @@
        xmlns:c="http://www.springframework.org/schema/c"
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:aop="http://www.springframework.org/schema/aop"
-       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
-        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
-        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
     <description>
         This is the main Spring configuration file with some of the main "core" classes defined. You shouldn't really
         modify this unless you
@@ -54,17 +52,14 @@
     </bean>
     <!--&lt;!&ndash; 事务管理器配置, 使用jdbc事务 &ndash;&gt;-->
     <!--<bean id="transactionManager"-->
-          <!--class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
     <!--</bean>-->
     <!--&lt;!&ndash; 使用annotation定义事务 &ndash;&gt;-->
     <!--<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>-->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-
-    <bean id="storageLogin" class="com.cheyipai.cas.jdbc.StorageLogin" p:jdbcTemplate-ref="jdbcTemplate"/>
-
 
     <bean id="timingAspect" class="org.perf4j.log4j.aop.TimingAspect"/>
 

@@ -1,4 +1,4 @@
-package com.cheyipai.cas.authentication;
+package com.demo.cas.authentication;
 
 import org.jasig.cas.authentication.RememberMeUsernamePasswordCredential;
 

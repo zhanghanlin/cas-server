@@ -52,10 +52,9 @@
    | zhanghanlin update org.jasig.cas.authentication.LdapAuthenticationHandler
    -->
     <bean id="ldapAuthenticationHandler"
-          class="com.cheyipai.cas.authentication.LdapAuthenticationHandler"
+          class="com.demo.cas.authentication.LdapAuthenticationHandler"
           init-method="initialize"
           p:principalIdAttribute="userPrincipalName"
-          p:storageLogin-ref="storageLogin"
           c:authenticator-ref="authenticator">
         <property name="principalAttributeMap">
             <map>

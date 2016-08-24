@@ -212,7 +212,7 @@
           p:warnCookieGenerator-ref="warnCookieGenerator"
           p:ticketGrantingTicketCookieGenerator-ref="ticketGrantingTicketCookieGenerator"/>
 
-    <bean id="authenticationViaFormAction" class="com.cheyipai.cas.web.flow.UserAuthenticationViaFormAction"
+    <bean id="authenticationViaFormAction" class="com.demo.cas.web.flow.UserAuthenticationViaFormAction"
           p:centralAuthenticationService-ref="centralAuthenticationService"
           p:warnCookieGenerator-ref="warnCookieGenerator"
           p:ticketRegistry-ref="ticketRegistry"/>

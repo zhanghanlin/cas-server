@@ -1,6 +1,5 @@
-package com.cheyipai.cas.authentication;
+package com.demo.cas.authentication;
 
-import com.cheyipai.cas.jdbc.StorageLogin;
 import org.jasig.cas.Message;
 import org.jasig.cas.authentication.Credential;
 import org.jasig.cas.authentication.HandlerResult;
@@ -47,12 +46,6 @@ public class LdapAuthenticationHandler extends AbstractUsernamePasswordAuthentic
      */
     @NotNull
     private final Authenticator authenticator;
-
-    private StorageLogin storageLogin;
-
-    public void setStorageLogin(StorageLogin storageLogin) {
-        this.storageLogin = storageLogin;
-    }
 
     /**
      * Component name.
@@ -243,13 +236,12 @@ public class LdapAuthenticationHandler extends AbstractUsernamePasswordAuthentic
         }
         attributeMap.put("userName", principalName);
         attributeMap.put("dn", ldapEntry.getDn());
-        String id = storageLogin.adInfo2DB(attributeMap);
-        return new SimplePrincipal(id, attributeMap);
+        return new SimplePrincipal(principalName, attributeMap);
     }
 
     @PostConstruct
     public void initialize() {
-        final List<String> attributes = new ArrayList<String>();
+        final List<String> attributes = new ArrayList<>();
         if (this.principalIdAttribute != null) {
             attributes.add(this.principalIdAttribute);
         }

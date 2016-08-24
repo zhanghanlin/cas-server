@@ -1,6 +1,6 @@
-package com.cheyipai.cas.web.flow;
+package com.demo.cas.web.flow;
 
-import com.cheyipai.cas.authentication.UsernamePasswordCaptchaCredential;
+import com.demo.cas.authentication.UsernamePasswordCaptchaCredential;
 import org.jasig.cas.authentication.Credential;
 import org.jasig.cas.web.flow.AuthenticationViaFormAction;
 import org.jasig.cas.web.support.WebUtils;

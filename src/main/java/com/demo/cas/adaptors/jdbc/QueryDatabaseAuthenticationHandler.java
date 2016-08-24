@@ -1,4 +1,4 @@
-package com.cheyipai.cas.adaptors.jdbc;
+package com.demo.cas.adaptors.jdbc;
 
 import org.jasig.cas.adaptors.jdbc.AbstractJdbcUsernamePasswordAuthenticationHandler;
 import org.jasig.cas.authentication.HandlerResult;

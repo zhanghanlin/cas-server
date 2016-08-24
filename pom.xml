@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cheyipai.cas</groupId>
+    <groupId>com.demo.cas</groupId>
     <artifactId>cas-server</artifactId>
     <packaging>war</packaging>
     <version>4.0.1</version>
@@ -102,14 +102,6 @@
         </dependency>
     </dependencies>
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/profile/${deploy.type}</directory>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
         <plugins>
             <!-- Compiler 插件, 设定JDK版本 -->
             <plugin>
@@ -151,23 +143,6 @@
             </plugin>
         </plugins>
     </build>
-    <!-- profiles 部署环境 -->
-    <profiles>
-        <!-- 打包开发机 -->
-        <profile>
-            <id>dev</id>
-            <properties>
-                <deploy.type>dev</deploy.type>
-            </properties>
-        </profile>
-        <!-- 打包生产机 -->
-        <profile>
-            <id>product</id>
-            <properties>
-                <deploy.type>product</deploy.type>
-            </properties>
-        </profile>
-    </profiles>
     <properties>
         <jdk.version>1.7</jdk.version>
         <plugin.compiler.version>2.5.1</plugin.compiler.version>
@@ -183,13 +158,5 @@
         <mysql.version>5.1.27</mysql.version>
         <jstl.version>1.1.2</jstl.version>
         <standard.version>1.1.2</standard.version>
-        <nexus.url>http://192.168.104.104:8081/nexus/</nexus.url>
     </properties>
-    <repositories>
-        <repository>
-            <id>central</id>
-            <name>central</name>
-            <url>{nexus.url}content/groups/</url>
-        </repository>
-    </repositories>
 </project>
